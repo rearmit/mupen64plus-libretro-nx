@@ -260,7 +260,7 @@ else ifneq (,$(findstring armv7-mali,$(platform)))
    HAVE_NEON = 1
    WITH_DYNAREC=arm
    CPUFLAGS += -mcpu=cortex-a7 -mfpu=neon-vfpv4
-   COREFLAGS += -DOS_LINUX
+   COREFLAGS += -DUSE_GENERIC_GLESV2 -DOS_LINUX
    ASFLAGS = -f elf -d ELF_TYPE
 
 # Amlogic S905/S905X/S912 (AMLGXBB/AMLGXL/AMLGXM) e.g. Khadas VIM1/2 / S905X2 (AMLG12A) & S922X/A311D (AMLG12B) e.g. Khadas VIM3 - 32-bit userspace
